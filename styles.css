@@ -284,8 +284,31 @@ p { line-height: 1.7; }
   background: #050505;
   border-top: 1px solid rgba(255,255,255,.12);
 }
-.site-footer > span { font-family: "Russo One", Montserrat, sans-serif; font-size: 20px; }
+.footer-brand { font-family: "Russo One", Montserrat, sans-serif; font-size: 20px; }
 .site-footer p { margin: 0; color: rgba(255,255,255,.64); }
+.footer-credit {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 52px;
+  padding: 0 24px;
+  color: rgba(5,5,5,.62);
+  background: linear-gradient(135deg, #ffffff, #fff1f1);
+  border: 1px solid rgba(240,24,24,.18);
+  box-shadow: 0 18px 42px rgba(0,0,0,.24);
+  font-size: 15px;
+  font-weight: 500;
+}
+.footer-credit a {
+  color: #7c5f64;
+  font-weight: 800;
+  transition: color .2s ease, transform .2s ease;
+}
+.footer-credit a:hover {
+  color: var(--red);
+  transform: translateY(-1px);
+}
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; transition-delay: var(--delay, 0s); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -326,7 +349,8 @@ p { line-height: 1.7; }
   .logo-frame { transform: none; }
   .reel-orbit { width: 280px; height: 280px; }
   .clapper { right: -10px; width: 150px; }
-  .site-footer { display: grid; }
+  .site-footer { display: grid; justify-items: start; }
+  .footer-credit { justify-self: start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -334,4 +358,6 @@ p { line-height: 1.7; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+
 
